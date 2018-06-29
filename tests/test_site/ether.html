@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>TEST</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        window.setTimeout(function() {
+            $('#ajax_content').load('https://ropsten.etherscan.io/txs?a=0x38126bcf190003c488ea22a57ad0495b5d235cc6');
+        }, 1000)
+    })
+    </script>
+  </head> 
+  <body>
+    <h1>Test Page: AJAX-loaded readiness</h1>
+    
+    <div id="ajax_content"></div>
+    
+  </body>
+</html>
