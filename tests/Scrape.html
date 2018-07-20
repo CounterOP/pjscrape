@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>TEST</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+	function first() {
+    setTimeout(function() {
+            $('#ajax_content').load('https://bitcointalk.org/index.php?action=merit;msg=39886796');
+        second();
+        third();
+    }, 1000);
+	}
+	function second() {
+		$('#ajax_content2').append('second <br>');
+	}
+	function third() {
+		$('#ajax_content2').append('third <br>');
+	}
+	first();
+    /*$(function() {
+        window.setTimeout(function() {
+            $('#ajax_content').load('https://bitcointalk.org/index.php?action=merit;msg=39886796');
+        }, 1000)
+    })*/
+    </script>
+  </head> 
+  <body>
+    <h1>Test Page: AJAX-loaded readiness</h1>
+    <div id="ajax_content2"></div>
+    <div id="ajax_content"></div>
+    
+  </body>
+</html>
